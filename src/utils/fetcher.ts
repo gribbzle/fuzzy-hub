@@ -1,6 +1,5 @@
 import { API_BASE_URL } from "@constants";
 
-import { redirectAdminOnUnauthorized } from "./adminApiAuth";
 import { getAuthHeadersForClient } from "./authCookie";
 
 export async function fetcher<TResponse>(
@@ -26,15 +25,8 @@ export async function fetcher<TResponse>(
   });
 
   if (!response.ok) {
-    if (redirectAdminOnUnauthorized(response, url)) {
-      throw Object.assign(new Error("Unauthorized"), {
-        status: response.status,
-      });
-    }
-
     const error = await response.json().catch(() => ({}));
     console.error(error);
-
     throw new Error(error.data.type);
   }
 
