@@ -3,8 +3,7 @@
 import { twMerge } from "@utils";
 
 import { CheckboxProps } from "@portal/ui/atoms";
-// TODO: молекула не может ссылаться на молекулу
-import { CheckboxField } from "@portal/ui/molecules";
+import { Checkbox } from "@portal/ui/atoms";
 
 export interface FilterCheckboxItemProps {
   label: string;
@@ -23,7 +22,10 @@ export const FilterCheckboxItem = ({
   <div
     className={twMerge("flex items-center justify-between gap-2", className)}
   >
-    <CheckboxField name="test" label={label} />
+    <label className="flex items-center gap-2">
+      <Checkbox {...slotProps?.checkbox} />
+      <span className="text-14">{label}</span>
+    </label>
     {count && (
       <div className="text-14 text-primary flex h-5 items-center justify-center rounded-xl bg-white px-2 font-medium">
         {count}

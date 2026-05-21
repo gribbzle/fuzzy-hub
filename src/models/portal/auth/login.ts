@@ -6,7 +6,7 @@ export interface LoginRequest {
   password: string;
 }
 
-interface AuthenticatedUserProfile {
+export interface AuthenticatedUserProfile {
   public_id: string;
   type: ProfileType;
   approved: boolean;

@@ -1,4 +1,5 @@
 This is a [Next.js](https://nextjs.org) project built with [React 19](https://react.dev), [TypeScript](https://www.typescriptlang.org), and [TailwindCSS v4](https://tailwindcss.com).
+Fuzzy Hub is a multi-vendor pet platform that connects pet owners with breeders, trainers, and service providers.
 
 ## Getting Started
 

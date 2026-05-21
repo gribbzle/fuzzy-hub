@@ -1,4 +1,2 @@
-// TODO: duplicate FetcherResponse
-export interface FetcherResponse<T> {
-  data: T;
-}
+import { FetcherResponse } from "@lib/api/types";
+
