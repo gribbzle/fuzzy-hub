@@ -1,12 +1,12 @@
-import { defineConfig, devices } from '@playwright/experimental-ct-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import { defineConfig, devices } from "@playwright/experimental-ct-react";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests/',
-  testMatch: '**/*.component.spec.tsx',
+  testDir: "./tests/",
+  testMatch: "**/*.component.spec.tsx",
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   /* Run tests in files in parallel */
@@ -18,11 +18,11 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'list',
+  reporter: "list",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
 
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
@@ -45,8 +45,8 @@ export default defineConfig({
 
   projects: [
     {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
     },
   ],
 });

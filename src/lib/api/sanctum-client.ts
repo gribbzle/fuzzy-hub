@@ -1,5 +1,6 @@
 import { ApiFetchError, toApiError } from "@lib/api/error";
 import { FetcherResponse } from "@lib/api/types";
+
 import {
   AuthenticatedUserResource,
   LoginRequest,
@@ -19,14 +20,17 @@ const ensureCsrfCookie = async (forceRefresh = false) => {
 
   if (!csrfCookieRequest) {
     console.log(3);
-    csrfCookieRequest = fetch("https://fuzzyhub.generals-soft.com/sanctum/csrf-cookie", {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        Accept: "application/json",
-        "X-Requested-With": "XMLHttpRequest",
+    csrfCookieRequest = fetch(
+      "https://fuzzyhub.generals-soft.com/sanctum/csrf-cookie",
+      {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          Accept: "application/json",
+          "X-Requested-With": "XMLHttpRequest",
+        },
       },
-    })
+    )
       .then((response) => {
         console.log("response", response);
 
@@ -106,10 +110,9 @@ export const loginWithSanctum = async (
   params: LoginRequest,
 ): Promise<LoginResponse> => {
   try {
-    const { data } = await makeAuthRequest<FetcherResponse<AuthenticatedUserResource>>(
-      "/api/v1/portal/auth/login",
-      params,
-    );
+    const { data } = await makeAuthRequest<
+      FetcherResponse<AuthenticatedUserResource>
+    >("/api/v1/portal/auth/login", params);
 
     console.log("data", data);
 
@@ -124,10 +127,9 @@ export const oauthLoginWithSanctum = async ({
   ...params
 }: OAuthLoginParams): Promise<LoginResponse> => {
   try {
-    const { data } = await makeAuthRequest<FetcherResponse<AuthenticatedUserResource>>(
-      `/api/auth/oauth/${provider}`,
-      params,
-    );
+    const { data } = await makeAuthRequest<
+      FetcherResponse<AuthenticatedUserResource>
+    >(`/api/auth/oauth/${provider}`, params);
 
     return { data, error: null };
   } catch (error) {

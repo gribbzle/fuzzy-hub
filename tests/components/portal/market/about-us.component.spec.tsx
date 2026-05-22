@@ -15,9 +15,7 @@ const runWidthCase = (
       const component = await mount(<AboutUs data={ABOUT_US_MOCK} />);
       const container = component.locator(":scope > div").first();
 
-      await expect(container).toHaveScreenshot(
-        `about-us-${viewportWidth}.png`,
-      );
+      await expect(container).toHaveScreenshot(`about-us-${viewportWidth}.png`);
     });
   });
 };

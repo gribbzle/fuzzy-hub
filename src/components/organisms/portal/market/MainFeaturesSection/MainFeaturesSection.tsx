@@ -29,7 +29,10 @@ export const MainFeaturesSection = ({
 
   return (
     <Container
-      className={twMerge("large-desktop:gap-11 tablet:gap-8 max-tablet:gap-5", className)}
+      className={twMerge(
+        "large-desktop:gap-11 tablet:gap-8 max-tablet:gap-5",
+        className,
+      )}
       component="section"
     >
       <Box className="large-desktop:gap-4 max-large-desktop:gap-3">

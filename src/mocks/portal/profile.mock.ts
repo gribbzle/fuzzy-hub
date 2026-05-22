@@ -7,7 +7,7 @@ export const CUSTOMER_PROFILE_MOCK: ProfileResource = {
   profile_data: null,
   public_id: "7f8b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6a",
   type: "customer",
-  updated_at: "2023-04-29T16:57:48Z"
+  updated_at: "2023-04-29T16:57:48Z",
 };
 
 export const BREEDER_PROFILE_MOCK: ProfileResource = {
@@ -17,7 +17,7 @@ export const BREEDER_PROFILE_MOCK: ProfileResource = {
   profile_data: null,
   public_id: "7f8b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6b",
   type: "breeder",
-  updated_at: "2023-04-29T16:57:48Z"
+  updated_at: "2023-04-29T16:57:48Z",
 };
 
 export const SERVICE_PROFILE_MOCK: ProfileResource = {
@@ -27,5 +27,5 @@ export const SERVICE_PROFILE_MOCK: ProfileResource = {
   profile_data: null,
   public_id: "7f8b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6c",
   type: "breeder",
-  updated_at: "2023-04-29T16:57:48Z"
+  updated_at: "2023-04-29T16:57:48Z",
 };

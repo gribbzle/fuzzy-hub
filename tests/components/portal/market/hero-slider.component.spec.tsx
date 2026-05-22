@@ -15,14 +15,19 @@ const runWidthCase = (
 
     test(`matches ${expectedWidth}px container`, async ({ mount }) => {
       const component = await mount(
-        <Container component="section" className="tablet:max-w-auto max-tablet:px-0">
+        <Container
+          component="section"
+          className="tablet:max-w-auto max-tablet:px-0"
+        >
           <HeroSlider data={HERO_SLIDER_MOCK} />
         </Container>,
       );
 
       const container = component.locator(":scope > div").first();
 
-      await expect(container).toHaveScreenshot(`hero-slider-${viewportWidth}.png`);
+      await expect(container).toHaveScreenshot(
+        `hero-slider-${viewportWidth}.png`,
+      );
     });
   });
 };

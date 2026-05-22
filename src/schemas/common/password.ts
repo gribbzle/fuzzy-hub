@@ -6,8 +6,7 @@ export const passwordSchema = z
   .min(8, { message: "Be at least 8 characters long" })
   .max(25, { message: "Password must be at most 25 characters" })
   .refine((val) => /[a-z]/.test(val) && /[A-Z]/.test(val), {
-    message:
-      "Include both lowercase (a–z) and uppercase (A–Z) letters",
+    message: "Include both lowercase (a–z) and uppercase (A–Z) letters",
   })
   .regex(/[A-Z]/, {
     message: "Password must contain at least one uppercase letter",
