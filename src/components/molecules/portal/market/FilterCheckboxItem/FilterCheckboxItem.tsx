@@ -18,6 +18,7 @@ export const FilterCheckboxItem = ({
   label,
   count,
   className,
+  slotProps,
 }: FilterCheckboxItemProps) => (
   <div
     className={twMerge("flex items-center justify-between gap-2", className)}
