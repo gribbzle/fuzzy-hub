@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,81 +19,31 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@constants": [
-        "./src/constants"
-      ],
-      "@utils": [
-        "./src/utils"
-      ],
-      "@lib/*": [
-        "./src/lib/*"
-      ],
-      "@store/actions": [
-        "./src/store/actions"
-      ],
-      "@schemas": [
-        "./src/schemas/common"
-      ],
-      "@models": [
-        "./src/models/common"
-      ],
-      "@portal/ui/icons": [
-        "./src/components/atoms/portal/icons"
-      ],
-      "@portal/ui/atoms": [
-        "./src/components/atoms/portal"
-      ],
-      "@portal/ui/molecules": [
-        "./src/components/molecules/portal/common"
-      ],
-      "@portal/ui/organisms": [
-        "./src/components/organisms/portal/common"
-      ],
-      "@portal/ui/templates": [
-        "./src/components/templates/portal/common"
-      ],
-      "@portal/contexts": [
-        "./src/contexts/portal/common"
-      ],
-      "@portal/actions": [
-        "./src/actions/portal/common"
-      ],
-      "@portal/mocks": [
-        "./src/mocks/portal"
-      ],
-      "@portal/models": [
-        "./src/models/portal/common"
-      ],
-      "@portal/auth/actions": [
-        "./src/actions/portal/auth"
-      ],
-      "@portal/auth/ui/molecules": [
-        "./src/components/molecules/portal/auth"
-      ],
-      "@portal/auth/ui/organisms": [
-        "./src/components/organisms/portal/auth"
-      ],
-      "@portal/auth/ui/templates": [
-        "./src/components/templates/portal/auth"
-      ],
-      "@portal/auth/schemas": [
-        "./src/schemas/portal/auth"
-      ],
-      "@portal/auth/models": [
-        "./src/models/portal/auth"
-      ],
-      "@portal/auth/hooks": [
-        "./src/hooks/portal/auth"
-      ],
-      "@portal/auth/constants": [
-        "./src/constants/portal/auth"
-      ],
-      "@portal/market/actions": [
-        "./src/actions/portal/market"
-      ],
+      "@/*": ["./src/*"],
+      "@constants": ["./src/constants"],
+      "@utils": ["./src/utils"],
+      "@lib/*": ["./src/lib/*"],
+      "@store/actions": ["./src/store/actions"],
+      "@schemas": ["./src/schemas/common"],
+      "@models": ["./src/models/common"],
+      "@portal/ui/icons": ["./src/components/atoms/portal/icons"],
+      "@portal/ui/atoms": ["./src/components/atoms/portal"],
+      "@portal/ui/molecules": ["./src/components/molecules/portal/common"],
+      "@portal/ui/organisms": ["./src/components/organisms/portal/common"],
+      "@portal/ui/templates": ["./src/components/templates/portal/common"],
+      "@portal/contexts": ["./src/contexts/portal/common"],
+      "@portal/actions": ["./src/actions/portal/common"],
+      "@portal/mocks": ["./src/mocks/portal"],
+      "@portal/models": ["./src/models/portal/common"],
+      "@portal/auth/actions": ["./src/actions/portal/auth"],
+      "@portal/auth/ui/molecules": ["./src/components/molecules/portal/auth"],
+      "@portal/auth/ui/organisms": ["./src/components/organisms/portal/auth"],
+      "@portal/auth/ui/templates": ["./src/components/templates/portal/auth"],
+      "@portal/auth/schemas": ["./src/schemas/portal/auth"],
+      "@portal/auth/models": ["./src/models/portal/auth"],
+      "@portal/auth/hooks": ["./src/hooks/portal/auth"],
+      "@portal/auth/constants": ["./src/constants/portal/auth"],
+      "@portal/market/actions": ["./src/actions/portal/market"],
       "@portal/market/ui/molecules": [
         "./src/components/molecules/portal/market"
       ],
@@ -107,26 +53,14 @@
       "@portal/market/ui/templates": [
         "./src/components/templates/portal/market"
       ],
-      "@portal/market/models": [
-        "./src/models/portal/market"
-      ],
-      "@portal/market/contexts": [
-        "./src/contexts/portal/market"
-      ],
-      "@portal/market/utils": [
-        "./src/utils/portal/market"
-      ],
+      "@portal/market/models": ["./src/models/portal/market"],
+      "@portal/market/contexts": ["./src/contexts/portal/market"],
+      "@portal/market/utils": ["./src/utils/portal/market"],
       "@portal/customer/ui/molecules": [
         "./src/components/molecules/portal/customer"
       ],
       "@portal/customer/ui/organisms": [
         "./src/components/organisms/portal/customer"
-      ],
-      "@admin/models": [
-        "./src/models/admin"
-      ],
-      "@admin/hooks": [
-        "./src/hooks/admin"
       ]
     }
   },
@@ -139,8 +73,5 @@
     "**/*.mts",
     ".next/dev/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    ".next"
-  ]
+  "exclude": ["node_modules", ".next"]
 }
