@@ -21,7 +21,9 @@ test.describe("visual regression tests", () => {
     });
 
     await test.step("secret question", async () => {
-      await page.getByRole('link', { name: 'Recover by secret question' }).click();
+      await page
+        .getByRole("link", { name: "Recover by secret question" })
+        .click();
       await page.locator("input[name=email]").fill("user_name@gmail.com");
       await page.locator("input[name=answer]").focus();
 
@@ -29,7 +31,7 @@ test.describe("visual regression tests", () => {
         `secret-question-${viewport?.width}.png`,
       );
 
-      await page.getByRole('button', { name: 'Back' }).click();
+      await page.getByRole("button", { name: "Back" }).click();
     });
 
     await test.step("code", async () => {

@@ -46,8 +46,7 @@ export const proxyAuthRequest = async ({
 }: ProxyRequestOptions): Promise<Response> => {
   const urlBase = includeApiVersion ? API_BASE_URL : API_ORIGIN;
   const url = `${urlBase}${path}`;
-  const body =
-    method === "GET" || !request ? undefined : await request.text();
+  const body = method === "GET" || !request ? undefined : await request.text();
 
   const upstream = await fetch(url, {
     method,

@@ -1,5 +1,6 @@
-import { Pet } from "@portal/market/ui/molecules";
 import { TabProps } from "@portal/ui/atoms";
+
+import { Pet } from "@portal/market/ui/molecules";
 import { FeaturedListingProps } from "@portal/market/ui/organisms";
 
 const itemsMock: Pet[] = [

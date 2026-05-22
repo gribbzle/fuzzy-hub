@@ -12,7 +12,9 @@ const runWidthCase = (viewportWidth: number, expectedWidth: number) => {
       const component = await mount(<Header />);
       const headerContainer = component.locator(":scope > div").first();
 
-      await expect(headerContainer).toHaveScreenshot(`header-${viewportWidth}.png`);
+      await expect(headerContainer).toHaveScreenshot(
+        `header-${viewportWidth}.png`,
+      );
     });
   });
 };

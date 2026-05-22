@@ -3,10 +3,7 @@ import { HERO_SECTION_MOCK } from "@portal/mocks";
 
 import { HeroSection } from "@portal/market/ui/organisms";
 
-const runWidthCase = (
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
+const runWidthCase = (viewportWidth: number, viewportHeight: number) => {
   test.describe(`hero section ${viewportWidth}`, () => {
     test.use({ viewport: { width: viewportWidth, height: viewportHeight } });
 
