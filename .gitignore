@@ -24,6 +24,11 @@
 .DS_Store
 *.pem
 .junie
+certificates
+.idea
+.output.txt
+.cursor
+.continue
 
 # debug
 npm-debug.log*
@@ -40,12 +45,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-certificates
-.idea
-.output.txt
-.cursor
-.continue
 
 # Playwright
 /test-results/

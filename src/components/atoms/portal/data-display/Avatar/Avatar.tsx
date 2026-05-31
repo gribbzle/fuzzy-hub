@@ -11,7 +11,7 @@ interface AvatarProps extends Omit<ImageProps, "src" | "alt"> {
 }
 
 export const Avatar = ({
-  alt = "avatar",
+  alt = "",
   src,
   variant = "circle",
   className,

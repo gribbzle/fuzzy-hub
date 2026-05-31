@@ -46,7 +46,7 @@ body {
   --text-14--letter-spacing: 0;
 
   --text-16: 16px;
-  --text-16--line-height: 22px;
+  --text-16--line-height: 20px;
   --text-16--letter-spacing: 0;
 
   --text-18: 18px;
@@ -226,7 +226,7 @@ body {
 }
 
 @utility btn-mini {
-  @apply text-16 h-8.5 px-4 font-semibold;
+  @apply text-16 h-8 px-4 font-semibold;
 }
 
 @utility btn-small {
