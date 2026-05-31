@@ -36,43 +36,67 @@ export const ProfileSettings = ({
   };
 
   return (
-    <Paper className={twMerge("flex flex-col gap-8 p-8", className)}>
-      <Typography variant="h3">My profile</Typography>
+    <Paper
+      className={twMerge(
+        "border border-border-light rounded-3xl p-8 flex flex-col gap-8",
+        className,
+      )}
+    >
+      <Typography
+        variant="h3"
+        className="font-fredoka text-24 font-medium text-text-default"
+      >
+        My profile
+      </Typography>
       <div className="flex items-center gap-6">
-        <Avatar alt="" className="w-25 h-25" src={profile?.avatarUrl} />
+        <Avatar className="size-25" src={profile?.avatarUrl} />
         <Box className="gap-4">
           <div className="flex gap-2">
-            <Button variant="primary" size="mini">
-              Change image
+            <Button className="btn-primary btn-mini px-3 max-w-31.75 w-full">
+              Upload image
             </Button>
-            <Button variant="secondary" size="mini">
+            <Button className="btn-secondary btn-mini px-2 max-w-31.75 w-full">
               Remove image
             </Button>
           </div>
-          <p className="text-12 font-semibold text-[#757577]">
+          <p className="text-[12px] font-semibold text-text-secondary">
             We support PNGs, JPEGs and GIFs under 2 MB
           </p>
         </Box>
       </div>
       <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-8">
         <FormControl className="col-span-2">
-          <InputLabel>Full Name</InputLabel>
-          <TextInput name="fullName" required />
+          <InputLabel className="text-[12px] font-semibold text-text-secondary">
+            Full Name
+          </InputLabel>
+          <TextInput
+            name="fullName"
+            required
+          />
         </FormControl>
         <FormControl>
-          <InputLabel>Email</InputLabel>
-          <TextInput name="email" type="email" required />
+          <InputLabel className="text-[12px] font-semibold text-text-secondary">
+            Email
+          </InputLabel>
+          <TextInput
+            name="email"
+            type="email"
+            required
+          />
         </FormControl>
         <FormControl>
-          <InputLabel>Phone number</InputLabel>
-          <TextInput name="phoneNumber" type="tel" required />
+          <InputLabel className="text-[12px] font-semibold text-text-secondary">
+            Phone number
+          </InputLabel>
+          <TextInput
+            name="phoneNumber"
+            type="tel"
+            required
+          />
         </FormControl>
         <Button
           type="submit"
-          variant="primary"
-          size="medium"
-          className="max-w-52"
-          fullWidth
+          className="btn-primary btn-medium max-w-50 w-full"
         >
           Save changes
         </Button>
