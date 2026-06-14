@@ -15,7 +15,7 @@ export const TemplateAuthContent = ({
   <Box
     className={twMerge(
       "gap-5 w-full",
-      "large-desktop:gap-6 max-desktop:py-15 max-tablet:px-4 tablet:max-w-115 max-tablet:pt-4 max-tablet:pb-10 mx-auto max-desktop:mb-auto",
+      "large-desktop:gap-6 max-desktop:py-15 max-tablet:px-4 tablet:max-w-104 max-tablet:pt-4 max-tablet:pb-10 mx-auto max-desktop:mb-auto",
       className,
     )}
   >

@@ -14,8 +14,7 @@ export const TemplateAuthContentFooter = ({
 }: TemplateAuthContentFooterProps) => (
   <Box
     className={twMerge(
-      "gap-5 items-stretch px-5",
-      "large-desktop:gap-6 large-desktop:mx-5 max-tablet:gap-4 max-tablet:px-0 tablet:mx-7.5",
+      "gap-5 items-stretch large-desktop:gap-6 max-tablet:gap-4",
       className,
     )}
   >

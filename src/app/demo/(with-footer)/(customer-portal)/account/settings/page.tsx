@@ -14,7 +14,7 @@ import profileMock from "./_mocks/profile.mock";
 const AccountDemoPage = () => (
   <TemplateMain>
     <PageHeader {...pageHeaderMock} />
-    <Container className="flex-row gap-8 pt-8 pb-20">
+    <Container className="flex-row gap-8 pt-8">
       <ProfileSettings className="flex-1" {...profileMock} />
       <AccountSecurity className="flex-1" />
     </Container>

@@ -97,7 +97,7 @@ export const LoginForm = ({ onLogin, onOAuthLogin }: LoginFormProps) => {
   );
 
   return (
-    <TemplateAuthContent className="large-desktop:max-w-110 max-tablet:py-8 max-tablet:pb-10.5">
+    <TemplateAuthContent className="max-tablet:py-8 max-tablet:pb-10.5">
       <TemplateAuthContentHeader
         title="Welcome back!"
         subtitle="Please enter your details to continue"
@@ -127,7 +127,7 @@ export const LoginForm = ({ onLogin, onOAuthLogin }: LoginFormProps) => {
           )}
         </Form>
       </TemplateAuthContentForm>
-      <TemplateAuthContentFooter className="large-desktop:mx-2.5">
+      <TemplateAuthContentFooter>
         <SubmitButton form="login-form" formState={methods.formState}>
           Log In
         </SubmitButton>

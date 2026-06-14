@@ -11,6 +11,7 @@
     "prettier:check": "node --experimental-strip-types node_modules/prettier/bin/prettier.cjs . --check",
     "test:portal:auth": "playwright test tests/pages/portal/auth",
     "test:portal:market": "playwright test tests/pages/portal/market",
+    "test:portal:customer": "playwright test tests/pages/portal/customer",
     "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "dependencies": {
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@playwright/experimental-ct-react": "^1.59.1",
-    "@playwright/test": "^1.59.1",
+    "@playwright/test": "^1.60.0",
     "@tailwindcss/language-server": "^0.14.28",
     "@tailwindcss/postcss": "^4",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

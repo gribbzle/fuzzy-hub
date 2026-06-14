@@ -49,7 +49,7 @@ export const ArtDirectionImage = ({
       <source media="(max-width: 767px)" srcSet={mobile} />
       <img
         alt=""
-        className={twMerge("w-full h-auto object-cover", className)}
+        className={twMerge("w-full h-full object-cover", className)}
       />
     </picture>
   );

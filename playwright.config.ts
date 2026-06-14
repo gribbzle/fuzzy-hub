@@ -46,30 +46,30 @@ export default defineConfig({
 
   projects: [
     {
-      name: "webkit",
+      name: "chromium",
       use: {
-        ...devices["Desktop Safari"],
+        ...devices["Desktop Chrome"],
         viewport: { width: 1920, height: 1080 },
       },
     },
     {
-      name: "webkit",
+      name: "chromium",
       use: {
-        ...devices["Desktop Safari"],
+        ...devices["Desktop Chrome"],
         viewport: { width: 1280, height: 832 },
       },
     },
     {
-      name: "webkit",
+      name: "chromium",
       use: {
-        ...devices["Desktop Safari"],
+        ...devices["Desktop Chrome"],
         viewport: { width: 768, height: 1024 },
       },
     },
     {
-      name: "webkit",
+      name: "chromium",
       use: {
-        ...devices["Desktop Safari"],
+        ...devices["Desktop Chrome"],
         viewport: { width: 375, height: 701 },
       },
     },

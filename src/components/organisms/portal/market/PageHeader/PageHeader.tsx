@@ -17,7 +17,7 @@ export const PageHeader = ({
 }: PageHeaderProps) => (
   <div
     className={twMerge(
-      "bg-bg-light relative z-200 -mt-21 flex h-47 justify-center",
+      "bg-bg-light relative z-200 flex h-47 justify-center",
       className,
     )}
   >
