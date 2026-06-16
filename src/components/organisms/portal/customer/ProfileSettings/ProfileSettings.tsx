@@ -69,30 +69,19 @@ export const ProfileSettings = ({
           <InputLabel className="text-[12px] font-semibold text-text-secondary">
             Full Name
           </InputLabel>
-          <TextInput
-            name="fullName"
-            required
-          />
+          <TextInput name="fullName" required />
         </FormControl>
         <FormControl>
           <InputLabel className="text-[12px] font-semibold text-text-secondary">
             Email
           </InputLabel>
-          <TextInput
-            name="email"
-            type="email"
-            required
-          />
+          <TextInput name="email" type="email" required />
         </FormControl>
         <FormControl>
           <InputLabel className="text-[12px] font-semibold text-text-secondary">
             Phone number
           </InputLabel>
-          <TextInput
-            name="phoneNumber"
-            type="tel"
-            required
-          />
+          <TextInput name="phoneNumber" type="tel" required />
         </FormControl>
         <Button
           type="submit"

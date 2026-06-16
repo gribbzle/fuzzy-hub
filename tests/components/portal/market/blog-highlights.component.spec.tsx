@@ -19,8 +19,7 @@ const runWidthCase = (viewportWidth: number, viewportHeight: number) => {
   });
 };
 
-// макеты неверные, тесты не проходят
-// runWidthCase(1920, 900);
-// runWidthCase(1280, 704);
-// runWidthCase(768, 690);
-// runWidthCase(375, 664);
+runWidthCase(1920, 900);
+runWidthCase(1280, 704);
+runWidthCase(768, 690);
+runWidthCase(375, 664);

@@ -4,18 +4,18 @@ import { twMerge } from "@utils";
 
 import { Check } from "@portal/ui/icons";
 
-export type CheckboxProps = DetailedHTMLProps<
+export interface CheckboxProps extends DetailedHTMLProps<
   Omit<InputHTMLAttributes<HTMLInputElement>, "size" | "type">,
   HTMLInputElement
-> & {
+> {
   size?: "small" | "large";
-};
+}
 
 export const Checkbox = ({
   size = "small",
   className,
   ...rest
-}: CheckboxProps) => (
+}: CheckboxProps): React.JSX.Element => (
   <label
     className={twMerge(
       "relative flex cursor-pointer items-center justify-center",

@@ -19,6 +19,41 @@ interface ButtonBaseProps {
   };
 }
 
+const variantClasses: Record<ButtonVariant, string> = {
+  primary: "btn-primary",
+  secondary: "btn-secondary",
+  tertiary: "btn-tertiary",
+};
+
+const sizeClasses: Record<ButtonSize, string> = {
+  mini: "btn-mini",
+  small: "btn-small",
+  medium: "btn-medium",
+  large: "btn-large",
+};
+
+const getButtonClasses = ({
+  variant = "primary",
+  size = "large",
+  fullWidth = false,
+  className,
+}: ButtonBaseProps) =>
+  twMerge(
+    "btn",
+    variantClasses[variant],
+    sizeClasses[size],
+    fullWidth && "w-full",
+    className,
+  );
+
+const ButtonInner = ({
+  children,
+  slotProps,
+}: {
+  children: ReactNode;
+  slotProps?: ButtonBaseProps["slotProps"];
+}) => <span className={slotProps?.text?.className}>{children}</span>;
+
 export interface ButtonProps
   extends
     ButtonBaseProps,
@@ -27,38 +62,20 @@ export interface ButtonProps
       HTMLButtonElement
     > {}
 
-const variantClasses = {
-  primary: "btn-primary",
-  secondary: "btn-secondary",
-  tertiary: "btn-tertiary",
-};
-
-const sizeClasses = {
-  mini: "btn-mini",
-  small: "btn-small",
-  medium: "btn-medium",
-  large: "btn-large",
-};
-
 export const Button = ({
-  variant = "primary",
-  size = "large",
+  variant,
+  size,
   children,
   className,
-  fullWidth = false,
+  fullWidth,
+  slotProps,
   ...rest
 }: ButtonProps) => (
   <button
-    className={twMerge(
-      "btn",
-      variantClasses[variant],
-      sizeClasses[size],
-      fullWidth && "w-full",
-      className,
-    )}
+    className={getButtonClasses({ variant, size, fullWidth, className })}
     {...rest}
   >
-    <span>{children}</span>
+    <ButtonInner slotProps={slotProps}>{children}</ButtonInner>
   </button>
 );
 
@@ -69,24 +86,20 @@ export interface ButtonLinkProps
 }
 
 export const ButtonLink = ({
-  variant = "primary",
+  variant,
+  size,
   children,
   className,
-  fullWidth = false,
+  fullWidth,
   href,
   slotProps,
   ...rest
 }: ButtonLinkProps) => (
   <NextLink
-    className={twMerge(
-      "btn btn-medium",
-      variantClasses[variant],
-      fullWidth && "w-full",
-      className,
-    )}
+    className={getButtonClasses({ variant, size, fullWidth, className })}
     href={href ?? "#"}
     {...rest}
   >
-    <span className={slotProps?.text?.className}>{children}</span>
+    <ButtonInner slotProps={slotProps}>{children}</ButtonInner>
   </NextLink>
 );
