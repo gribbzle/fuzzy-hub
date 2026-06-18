@@ -28,7 +28,7 @@ export const CircleButton = ({
       size === "medium" && "h-11 w-11",
       size === "large" && "h-14 w-14",
       variant === "default" &&
-        "hover:text-primary-hover active:text-primary-active",
+        "hover:text-primary-hovered active:text-primary-pressed",
       variant === "primary" &&
         "border-border-gray border bg-white hover:border-0 hover:bg-[#FFDEC2] active:border-0 active:bg-[#FFC99D]",
       variant === "secondary" &&

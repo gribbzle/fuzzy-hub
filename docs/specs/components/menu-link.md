@@ -24,8 +24,8 @@ The **MenuLink** component is a navigation link designed for menus and sidebars.
   - `font-semibold` weight
 - **Color states**:
   - Default: `text-text-default`
-  - Hover: `hover:text-primary-hover`
-  - Active: `active:text-primary-active`
+  - Hover: `hover:text-primary-hovered`
+  - Active: `active:text-primary-pressed`
 - **Spacing**:
   - Base gap: `gap-1.5` (6px)
   - Large desktop: `large-desktop:gap-2.5` (10px)
@@ -44,7 +44,7 @@ The **MenuLink** component is a navigation link designed for menus and sidebars.
 
 - Uses `NextLink` → renders semantic `<a>` with `href`.
 - Ensure `children` or `aria-label` provides accessible name when icons only.
-- Color contrast for `text-text-default`, `text-primary-hover`, `text-primary-active` meets WCAG AA.
+- Color contrast for `text-text-default`, `text-primary-hovered`, `text-primary-pressed` meets WCAG AA.
 
 ## Testing Guidelines
 

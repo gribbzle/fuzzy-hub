@@ -31,11 +31,13 @@ body {
   --color-border-gray: #d9d9d9;
 
   --color-primary: #ff9842;
-  --color-primary-hover: #ffa55b;
-  --color-primary-active: #ff8d2f;
+  --color-primary-hovered: #ffa55b;
+  --color-primary-pressed: #ff8d2f;
   --color-primary-disabled: #ffcba0;
 
   --color-secondary: #39394c;
+  --color-secondary-hovered: #FFDEC2;
+  --color-secondary-pressed: #FFC99D;
 
   --text-12: 12px;
   --text-12--line-height: 16px;
@@ -46,7 +48,7 @@ body {
   --text-14--letter-spacing: 0;
 
   --text-16: 16px;
-  --text-16--line-height: 20px;
+  --text-16--line-height: 22px;
   --text-16--letter-spacing: 0;
 
   --text-18: 18px;
@@ -77,7 +79,7 @@ body {
   --text-64--line-height: 78px;
   --text-64--letter-spacing: 0;
 
-  --shadow-button: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+  --shadow-button: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
   --shadow-dropdown: 0px 2px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
@@ -209,19 +211,19 @@ body {
 
 @layer components {
   .btn {
-    @apply box-border flex w-fit shrink-0 cursor-pointer items-center justify-center rounded-4xl pb-px transition-colors duration-200 disabled:cursor-not-allowed;
+    @apply box-border flex w-fit shrink-0 cursor-pointer items-center justify-center rounded-4xl transition-colors duration-200 disabled:cursor-not-allowed font-bold;
   }
 
   .btn-primary {
-    @apply bg-primary hover:bg-primary-hover active:bg-primary-active disabled:bg-primary-disabled text-white;
+    @apply bg-primary enabled:hover:bg-primary-hovered enabled:active:bg-primary-pressed disabled:bg-primary-disabled text-white;
   }
 
   .btn-secondary {
-    @apply enabled:text-text-default disabled:text-text-default/40 border-border-light border-[1.5px] bg-white enabled:hover:border-[#FFDEC2] enabled:hover:bg-[#FFDEC2] enabled:active:border-[#FFC99D] enabled:active:bg-[#FFC99D];
+    @apply enabled:text-text-default disabled:text-text-light border-0 not-hover:not-active:border border-border-light bg-white enabled:hover:bg-secondary-hovered enabled:active:bg-secondary-pressed;
   }
 
   .btn-tertiary {
-    @apply shadow-button text-text-default hover:border-secondary active:border-secondary bg-white hover:border active:border-2;
+    @apply shadow-button enabled:text-text-default disabled:text-text-light enabled:hover:border-secondary enabled:active:border-secondary bg-white enabled:hover:border enabled:active:border-2;
   }
 }
 
@@ -230,15 +232,15 @@ body {
 }
 
 @utility btn-small {
-  @apply text-16 h-10 px-6 font-bold;
+  @apply text-16 h-10 px-6;
 }
 
 @utility btn-medium {
-  @apply text-16 h-13.5 px-6 font-bold;
+  @apply text-16 h-14 px-6;
 }
 
 @utility btn-large {
-  @apply text-20 h-17 px-8 font-bold;
+  @apply text-20 h-17 px-8;
 }
 
 @layer components {

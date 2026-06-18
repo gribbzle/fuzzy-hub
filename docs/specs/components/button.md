@@ -6,14 +6,14 @@ The `Button` component is a reusable, accessible button primitive built on top o
 
 ## File Location
 
-`src/components/atoms/portal/inputs/Button/Button.tsx`
+`src/components/atoms/portal/inputs/Button/index.tsx`
 
 ## Props
 
 ### Shared Props (ButtonBaseProps)
 
 | Prop                         | Type                                       | Default     | Description                                                                                 |
-| ---------------------------- | ------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------- |
+|------------------------------|--------------------------------------------|-------------|---------------------------------------------------------------------------------------------|
 | `variant`                    | `"primary" \| "secondary" \| "tertiary"`   | `"primary"` | Determines the visual style via CSS classes `btn-primary`, `btn-secondary`, `btn-tertiary`. |
 | `size`                       | `"mini" \| "small" \| "medium" \| "large"` | `"large"`   | Controls padding and font size via `btn-mini`, `btn-small`, `btn-medium`, `btn-large`.      |
 | `fullWidth`                  | `boolean`                                  | `false`     | When `true`, adds `w-full` class to make the button stretch to the width of its container.  |
@@ -26,11 +26,12 @@ All standard `<button>` attributes are supported (e.g., `onClick`, `disabled`, `
 
 ### ButtonLinkProps (extends ButtonBaseProps + Omit<NextLinkProps, "href">)
 
-| Prop                                                                                                          | Type             | Default     | Description                                                                 |
-| ------------------------------------------------------------------------------------------------------------- | ---------------- | ----------- | --------------------------------------------------------------------------- |
-| `href`                                                                                                        | `string \| null` | `null`      | Target URL for the link. If falsy, defaults to `"#"` (in‑page placeholder). |
-| `children`                                                                                                    | `ReactNode`      | `undefined` | Content rendered inside the link.                                           |
+| Prop                                                                                                          | Type             | Default     | Description                                                                                                 |
+|---------------------------------------------------------------------------------------------------------------|------------------|-------------|-------------------------------------------------------------------------------------------------------------|
+| `href`                                                                                                        | `string \| null` | `null`      | Target URL for the link. If falsy, defaults to `"#"` (in‑page placeholder).                                 |
+| `children`                                                                                                    | `ReactNode`      | `undefined` | Content rendered inside the link.                                                                           |
 | All other `NextLinkProps` except `href` (e.g., `replace`, `scroll`, `shallow`, `locale`, etc.) are supported. |
+| ------------------------------------------------------------------------------------------------------------- | ---------------- | ----------- | ----------------------------------------------------------------------------------------------------------- |
 
 ## Usage Examples
 
@@ -114,10 +115,10 @@ _Note: The component itself does not have a built‑in loading state; consumers 
 
 ## Related Components
 
-- `src/components/atoms/portal/inputs/Button/index.ts` – re‑exports `Button` and `ButtonLink`.
+- `src/components/atoms/portal/inputs/Button/index.tsx` – re‑exports `Button` and `ButtonLink`.
 - Utility `twMerge` used for class merging.
 
 ## Version History
 
 - Introduced as part of the Atomic Design `atoms/portal` layer.
-- Supports TailwindCSS v4 (CSS‑first) – all styling via utility classes defined in `src/app/globals.css`.
+- Supports TailwindCSS v4 (CSS-first) – all styling via utility classes defined in `src/app/globals.css`.
