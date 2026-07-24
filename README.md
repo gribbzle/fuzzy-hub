@@ -1,41 +1,111 @@
-This is a [Next.js](https://nextjs.org) project built with [React 19](https://react.dev), [TypeScript](https://www.typescriptlang.org), and [TailwindCSS v4](https://tailwindcss.com).
+# 🐾 Fuzzy Hub
 
-Fuzzy Hub is a multi-vendor platform for buying and selling pets.
+**Your go-to platform for buying and selling pets.**
 
-## Getting Started
+Fuzzy Hub — это мультивендорная платформа для покупки и продажи домашних питомцев. Проект предоставляет удобный интерфейс как для покупателей, так и для продавцов, с полнофункциональной административной панелью.
 
-First, run the development server:
+## 📋 Описание проекта
+
+Fuzzy Hub решает задачу централизованного маркетплейса для животных:
+
+- 🛒 **Портал покупателя** — просмотр каталога, поиск и покупка питомцев
+- 🏪 **Портал продавца** — управление объявлениями, профилем и заказами
+- 👨‍💼 **Административная панель** — управление пользователями, моде��ация конте��та
+- 🔐 **Аутентификация** — безопасная система входа и регистрации
+- 📱 **Responsive дизайн** — работает на всех устройствах
+
+## 🛠️ Технологический стек
+
+| Категория          | Технология                         | Версия              |
+| ------------------ | ---------------------------------- | ------------------- |
+| **Framework**      | [Next.js](https://nextjs.org)      | 16+ (App Router)    |
+| **UI Library**     | [React](https://react.dev)         | 19                  |
+| **Язык**           | [TypeScript](https://www.typescriptlang.org) | Latest              |
+| **Стилизация**     | [TailwindCSS](https://tailwindcss.com) | v4 (CSS-first)      |
+| **Тестирование**   | [Playwright](https://playwright.dev) | Latest              |
+| **Линтирование**   | [ESLint](https://eslint.org)       | 9                   |
+| **Форматирование** | [Prettier](https://prettier.io)    | Latest              |
+| **API**            | REST с fetch                       | Built-in            |
+| **Состояние**      | Context API + little-state-machine | Latest              |
+| **Деплой**         | [Vercel](https://vercel.com)       | Via vercel-cli      |
+
+## 🏗️ Архитектура
+
+### Структура проекта
+
+```
+src/
+├── app/                    # Next.js App Router
+├── components/             # React компоненты (Atomic Design)
+│   ├── atoms/             # Базовые компоненты
+│   ├── molecules/         # Комбинированные компоненты
+│   ├── organisms/         # Сложные компоненты
+│   └── templates/         # Макеты страниц
+├── contexts/              # Context API
+├── lib/                   # Утилиты и хелперы
+│   └── api/              # REST API клиент
+├── mocks/                # Моковые данные для разработки
+└── styles/               # Глобальные стили
+```
+
+### Методология
+
+- **Atomic Design** — структурированный подход к разработке компонентов
+- **TypeScript** — полная типизация для надежности кода
+- **TailwindCSS v4** — CSS-first конфигурация через глобальные переменные
+
+## 🚀 Быстрый старт
+
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Запуск dev-сервера
 
 ```bash
 npm run dev
 ```
 
-> The dev server runs with HTTPS enabled (`--experimental-https`).
+> Dev-сервер запускается с HTTPS (`--experimental-https`) на [https://localhost:3000](https://localhost:3000)
 
-Open [https://localhost:3000](https://localhost:3000) with your browser to see the result.
+### Сборка для продакшена
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-## Stack
+### Тестирование
 
-- **Framework:** [Next.js 16+](https://nextjs.org) (App Router)
-- **UI:** [React 19](https://react.dev)
-- **Language:** [TypeScript](https://www.typescriptlang.org)
-- **Styling:** [TailwindCSS v4](https://tailwindcss.com)
-- **Linting:** [ESLint 9](https://eslint.org) + [eslint-config-next](https://nextjs.org/docs/app/api-reference/config/eslint)
-- **Formatting:** [Prettier](https://prettier.io)
+```bash
+npm run test:e2e      # E2E тесты с Playwright
+npm run lint          # Проверка кода
+npm run format        # Форматирование кода
+```
 
-## Learn More
+## 📚 Документация
 
-To learn more about Next.js, take a look at the following resources:
+- [AGENTS.md](./AGENTS.md) — руководство для AI-агентов
+- [Next.js документация](https://nextjs.org/docs)
+- [React документация](https://react.dev)
+- [TailwindCSS документация](https://tailwindcss.com)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Деплой
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Проект разворачивается на [Vercel](https://vercel.com):
 
-## Deploy on Vercel
+```bash
+vercel deploy
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Подробнее: [Next.js deployment docs](https://nextjs.org/docs/app/building-your-production-application/deploying)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Лицензия
+
+MIT
+
+---
+
+**Разработано с ❤️ для любителей животных**
